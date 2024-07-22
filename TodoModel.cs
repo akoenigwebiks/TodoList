@@ -1,29 +1,34 @@
-﻿using System.Xml.Serialization;
+﻿using System.Xml.Linq;
+using System.Xml.Serialization;
+using TodoList.Repositories;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace TodoList
 {
-    [XmlRoot("Todo")] 
+    
     public class TodoModel
     {
-        [XmlElement("ID")] 
+        public bool IsDone { get; set; }
         public int Id { get; set; }
 
-        [XmlElement("Title")] 
         public string Title { get; set; }
 
-        [XmlElement("Date")] 
-        public string XmlDate
+        public string DateStr
         {
             get { return Date.ToString("yyyy-MM-dd"); } 
             set { Date = DateOnly.Parse(value); } 
         }
 
-        [XmlIgnore] 
         public DateOnly Date { get; set; }
 
-        public TodoModel()
+        public TodoModel(int id ,string title, string dateStr , bool isDone=false)
         {
-
+            Id = id;
+            Title = title;
+            DateStr = dateStr;
+            IsDone = isDone;
         }
+
+        
     }
 }

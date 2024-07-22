@@ -14,9 +14,11 @@ namespace TodoList
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
 
-            string path = "Data/todos.xml";
+            //string path = "Data/todos.xml";
+            string path = "Data/todos.json";
 
-            Application.Run(new Todos(new XMLRepository(path)));
+            Application.Run(new Todos(new JsonRepository(path)));
+            //Application.Run(new Todos(new XMLRepository(path)));
         }
     }
 }

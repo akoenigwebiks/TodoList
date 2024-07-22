@@ -31,10 +31,10 @@
             textbox_title = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
             label_title = new ReaLTaiizor.Controls.MaterialLabel();
             label_date = new ReaLTaiizor.Controls.MaterialLabel();
-            hopeDatePicker1 = new ReaLTaiizor.Controls.HopeDatePicker();
             checkbox_isDone = new ReaLTaiizor.Controls.MaterialCheckBox();
             dataGridView_tasks = new DataGridView();
             button_action = new ReaLTaiizor.Controls.MaterialButton();
+            datePicker = new DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)dataGridView_tasks).BeginInit();
             SuspendLayout();
             // 
@@ -92,36 +92,6 @@
             label_date.TabIndex = 3;
             label_date.Text = "Due Date";
             // 
-            // hopeDatePicker1
-            // 
-            hopeDatePicker1.BackColor = Color.White;
-            hopeDatePicker1.BorderColor = Color.FromArgb(220, 223, 230);
-            hopeDatePicker1.Date = new DateTime(2024, 7, 22, 0, 0, 0, 0);
-            hopeDatePicker1.DayNames = "MTWTFSS";
-            hopeDatePicker1.DaysTextColor = Color.FromArgb(96, 98, 102);
-            hopeDatePicker1.DayTextColorA = Color.FromArgb(48, 49, 51);
-            hopeDatePicker1.DayTextColorB = Color.FromArgb(144, 147, 153);
-            hopeDatePicker1.HeaderFormat = "{0} Y - {1} M";
-            hopeDatePicker1.HeaderTextColor = Color.FromArgb(48, 49, 51);
-            hopeDatePicker1.HeadLineColor = Color.FromArgb(228, 231, 237);
-            hopeDatePicker1.HoverColor = Color.FromArgb(235, 238, 245);
-            hopeDatePicker1.Location = new Point(42, 243);
-            hopeDatePicker1.Name = "hopeDatePicker1";
-            hopeDatePicker1.NMColor = Color.FromArgb(192, 196, 204);
-            hopeDatePicker1.NMHoverColor = Color.FromArgb(64, 158, 255);
-            hopeDatePicker1.NYColor = Color.FromArgb(192, 196, 204);
-            hopeDatePicker1.NYHoverColor = Color.FromArgb(64, 158, 255);
-            hopeDatePicker1.PMColor = Color.FromArgb(192, 196, 204);
-            hopeDatePicker1.PMHoverColor = Color.FromArgb(64, 158, 255);
-            hopeDatePicker1.PYColor = Color.FromArgb(192, 196, 204);
-            hopeDatePicker1.PYHoverColor = Color.FromArgb(64, 158, 255);
-            hopeDatePicker1.SelectedBackColor = Color.FromArgb(64, 158, 255);
-            hopeDatePicker1.SelectedTextColor = Color.White;
-            hopeDatePicker1.Size = new Size(250, 270);
-            hopeDatePicker1.TabIndex = 4;
-            hopeDatePicker1.Text = "hopeDatePicker1";
-            hopeDatePicker1.ValueTextColor = Color.FromArgb(43, 133, 228);
-            // 
             // checkbox_isDone
             // 
             checkbox_isDone.AutoSize = true;
@@ -149,7 +119,7 @@
             dataGridView_tasks.RowHeadersWidth = 51;
             dataGridView_tasks.Size = new Size(340, 460);
             dataGridView_tasks.TabIndex = 6;
-            dataGridView_tasks.CellContentClick += dataGridView_tasks_CellContentClick;
+            dataGridView_tasks.CellClick += dataGridView_tasks_CellContentClick;
             // 
             // button_action
             // 
@@ -164,7 +134,7 @@
             button_action.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             button_action.Name = "button_action";
             button_action.NoAccentTextColor = Color.Empty;
-            button_action.Size = new Size(139, 36);
+            button_action.Size = new Size(85, 36);
             button_action.TabIndex = 7;
             button_action.Text = "ADD|EDIT";
             button_action.Type = ReaLTaiizor.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -172,15 +142,22 @@
             button_action.UseVisualStyleBackColor = true;
             button_action.Click += button_action_Click;
             // 
+            // datePicker
+            // 
+            datePicker.Location = new Point(42, 253);
+            datePicker.Name = "datePicker";
+            datePicker.Size = new Size(250, 27);
+            datePicker.TabIndex = 8;
+            // 
             // Todos
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(976, 728);
+            Controls.Add(datePicker);
             Controls.Add(button_action);
             Controls.Add(dataGridView_tasks);
             Controls.Add(checkbox_isDone);
-            Controls.Add(hopeDatePicker1);
             Controls.Add(label_date);
             Controls.Add(label_title);
             Controls.Add(textbox_title);
@@ -196,9 +173,9 @@
         private ReaLTaiizor.Controls.MaterialTextBoxEdit textbox_title;
         private ReaLTaiizor.Controls.MaterialLabel label_title;
         private ReaLTaiizor.Controls.MaterialLabel label_date;
-        private ReaLTaiizor.Controls.HopeDatePicker hopeDatePicker1;
         private ReaLTaiizor.Controls.MaterialCheckBox checkbox_isDone;
         private DataGridView dataGridView_tasks;
         private ReaLTaiizor.Controls.MaterialButton button_action;
+        private DateTimePicker datePicker;
     }
 }

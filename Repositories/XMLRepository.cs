@@ -27,7 +27,7 @@ namespace TodoList.Repositories
                 Id = int.Parse(node.Element("ID")!.Value),
                 Title = node.Element("Title")!.Value,
                 Date = DateOnly.Parse(node.Element("Date")!.Value),
-                Done = bool.Parse(node.Element("Done")!.Value)
+                Done = node.Element("Done")!.Value.ToUpper() == "TRUE"
             };
 
             //return new TodoModel(
@@ -44,7 +44,7 @@ namespace TodoList.Repositories
             XElement idNode = new XElement("ID", todo.Id);
             XElement titleNode = new XElement("Title", todo.Title);
             XElement dateNode = new XElement("Date", todo.Date.ToString("yyyy-MM-dd"));
-            XElement doneNode = new XElement("Done", todo.Done);
+            XElement doneNode = new XElement("Done", todo.Done.ToString());
             todoNode.Add(idNode, titleNode, dateNode, doneNode);
             return todoNode;
         }

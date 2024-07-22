@@ -1,10 +1,49 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <data>
-	<d2024-07-22>
-		<item>
-			<id>1</id>
-			<title>fffff</title>
-			<done>ergerg</done>
-		</item>
-	</d2024-07-22>	
+  <d2024-07-22>
+    <item>
+      <id>1</id>
+      <title>fffff</title>
+      <done>True</done>
+    </item>
+    <item>
+      <id>2</id>
+      <title>effwrfrf</title>
+      <done>False</done>
+    </item>
+    <item>
+      <id>3</id>
+      <title>effwrfrf</title>
+      <done>False</done>
+    </item>
+    <item>
+      <id>4</id>
+      <title>ger</title>
+      <done>False</done>
+    </item>
+    <item>
+      <id>5</id>
+      <title>nerewrwererw</title>
+      <done>True</done>
+    </item>
+    <item>
+      <id>7</id>
+      <title>wrewerewr</title>
+      <done>false</done>
+    </item>
+  </d2024-07-22>
+  <d2024-07-23>
+    <item>
+      <id>6</id>
+      <title>erwrewrew</title>
+      <done>True</done>
+    </item>
+  </d2024-07-23>
+  <d2024-07-18>
+    <item>
+      <id>8</id>
+      <title>wrewerewr</title>
+      <done>false</done>
+    </item>
+  </d2024-07-18>
 </data>

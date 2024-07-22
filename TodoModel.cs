@@ -1,4 +1,6 @@
-﻿using System.Xml.Serialization;
+﻿using System.Xml.Linq;
+using System.Xml.Serialization;
+using TodoList.Repositories;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace TodoList
@@ -19,12 +21,14 @@ namespace TodoList
 
         public DateOnly Date { get; set; }
 
-        public TodoModel(string title, string dateStr )
+        public TodoModel(int id ,string title, string dateStr , bool isDone=false)
         {
-            //Id = id;
+            Id = id;
             Title = title;
             DateStr = dateStr;
-            IsDone = false;
+            IsDone = isDone;
         }
+
+        
     }
 }

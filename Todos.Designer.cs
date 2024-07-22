@@ -123,7 +123,7 @@
             hopeDatePicker1.TabIndex = 4;
             hopeDatePicker1.Text = "hopeDatePicker1";
             hopeDatePicker1.ValueTextColor = Color.FromArgb(43, 133, 228);
-            hopeDatePicker1.onDateChanged += hopeDatePicker1_Click;
+            hopeDatePicker1.Click += hopeDatePicker1_Click_1;
             // 
             // checkbox_isDone
             // 
@@ -153,6 +153,7 @@
             dataGridView_tasks.RowHeadersWidth = 51;
             dataGridView_tasks.Size = new Size(298, 345);
             dataGridView_tasks.TabIndex = 6;
+            dataGridView_tasks.CellClick += dataGridView_tasks_CellClick;
             dataGridView_tasks.CellContentClick += dataGridView_tasks_CellContentClick;
             // 
             // button_action
